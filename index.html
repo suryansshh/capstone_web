@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alzheimer's Detection</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Add your custom styles here */
+    .testimonial-slide {
+      display: flex;
+      overflow: hidden;
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .testimonial-card {
+      margin-right: 20px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    .testimonial-card p {
+      font-style: italic;
+    }
+    .testimonial-card h4 {
+      margin-top: 10px;
+    }
+    .social-media {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-media a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: #333;
+      text-decoration: none;
+    }
+    .social-media a:hover {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Alzheimer's Detection</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#types">Types</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#detection">Detection</a></li>
+        <li><a href="https://github.com/your-repo" target="_blank">GitHub</a></li>
+        <li><a href="privacy-policy.html" target="_blank">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html" target="_blank">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section id="home">
+      <div class="hero">
+        <h1>Empowering Early Detection of Alzheimer's</h1>
+        <p>Revolutionizing healthcare with AI-driven insights. Upload an MRI scan to detect Alzheimer's Disease.</p>
+        <a href="#detection" class="btn">Start Detection</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://txhospitals.in/wp-content/uploads/2023/06/Understanding-Memory-Loss-Alzheimers-disease-the-basics.jpg-600x600.png" alt="Brain MRI illustration">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="info-section">
+      <h2>What is Alzheimer's Disease?</h2>
+      <p>
+        Alzheimer's disease is a degenerative brain disorder that progressively destroys memory and cognitive skills. 
+        It is the most common cause of dementia and affects millions globally. Symptoms typically start as mild memory loss 
+        but can advance to severe impairment in reasoning, behavior, and daily functions.
+      </p>
+      <div class="info-cards">
+        <div class="card">
+          <h3>Early Symptoms</h3>
+          <ul>
+            <li>Memory loss</li>
+            <li>Difficulty performing familiar tasks</li>
+            <li>Confusion about time or place</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Advanced Symptoms</h3>
+          <ul>
+            <li>Severe memory impairment</li>
+            <li>Difficulty recognizing family or friends</li>
+            <li>Loss of ability to communicate</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Types Section -->
+    <section id="types" class="info-section">
+      <h2>Types of Alzheimer's Disease</h2>
+      <div class="types-list">
+        <div class="type-item">
+          <h3>Early-Onset Alzheimer's</h3>
+          <p>Occurs in individuals younger than 65. It is rare but progresses rapidly.</p>
+        </div>
+        <div class="type-item">
+          <h3>Late-Onset Alzheimer's</h3>
+          <p>The most common type, typically diagnosed in individuals aged 65 and above.</p>
+        </div>
+        <div class="type-item">
+          <h3>Familial Alzheimer's Disease</h3>
+          <p>A rare genetic form of Alzheimer's passed down in families.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="info-section">
+      <h2>Why Choose Our Detection Tool?</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <h3>AI-Powered Accuracy</h3>
+          <p>Leveraging CNN models to analyze MRI scans with precision.</p>
+        </div>
+        <div class="feature">
+          <h3>User-Friendly Interface</h3>
+          <p>Upload images and get results in just a few clicks.</p>
+        </div>
+        <div class="feature">
+          <h3>Secure and Confidential</h3>
+          <p>Your data remains private and secure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detection Section -->
+    <section id="detection" class="info-section">
+      <h2>Start Alzheimer's Detection</h2>
+      <p>
+        Upload your MRI scan below to analyze it for potential signs of Alzheimer’s disease. 
+        Get insights in seconds with our advanced detection tool.
+      </p>
+      <div class="upload-section">
+        <input type="file" id="mri-upload" accept="image/*">
+        <button class="btn" onclick="processImage()">Calculate</button>
+        <div id="result" class="result"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section (Slideshow) -->
+    <section id="testimonials" class="testimonial-slide">
+      <div class="testimonial-card">
+        <p>"This website helped me understand Alzheimer's disease in a way I could easily grasp."</p>
+        <h4>- Sarah, User</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The AI model for detecting Alzheimer's is a game changer!"</p>
+        <h4>- Dr. John, Researcher</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Easy to use and provides immediate feedback on my MRI scan results. Highly recommend!"</p>
+        <h4>- Emily, Caregiver</h4>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <div class="social-media">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Alzheimer's Detection</p>
+  </footer>
+
+  <script>
+    function processImage() {
+      const fileInput = document.getElementById('mri-upload');
+      const resultDiv = document.getElementById('result');
+      
+      if (!fileInput.files.length) {
+        resultDiv.textContent = 'Please upload an MRI image.';
+        resultDiv.style.color = 'red';
+        return;
+      }
+      
+      resultDiv.textContent = 'Processing...';
+      setTimeout(() => {
+        resultDiv.textContent = 'Result: No signs of Alzheimer’s detected.';
+        resultDiv.style.color = 'green';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
